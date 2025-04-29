@@ -1,0 +1,178 @@
+@import url('theme.css');
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--color-primary);
+  text-align: center;
+  padding-block: 0;
+  padding-inline: 10px;
+  color: var(--color-text-primary);
+}
+
+header {
+  padding-block: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  width: 220px;
+  height: auto;
+}
+
+.filters {
+  background-color: var(--color-card-background);
+  padding-block: 20px;
+  padding-inline: 20px;
+  border-radius: 8px;
+  max-width: 1150px;
+  margin-block-start: 0;
+  margin-block-end: 20px;
+  margin-inline: auto;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  box-shadow: var(--shadow-filter);
+}
+
+.filter {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 250px;
+}
+
+.filter label {
+  font-size: 14px;
+  color: var(--color-text-label);
+  margin-block-end: 5px;
+}
+
+.filter select {
+  width: 100%;
+  padding-block: 8px;
+  padding-inline: 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+}
+
+.filter select:focus {
+  outline: 2px solid var(--color-secondary);
+  outline-offset: 2px;
+}
+
+.pokemon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+.pokemon-card {
+  background: var(--color-card-background);
+  border-radius: 12px;
+  padding-block: 1.5rem;
+  padding-inline: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: var(--shadow-card);
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+}
+
+/* Focus state for Pokemon cards */
+.pokemon-card:focus-within {
+  outline: 3px solid var(--color-secondary);
+  outline-offset: 4px;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+}
+
+/* Hover effect for cards */
+.pokemon-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+}
+
+.pokemon-card img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  margin-block-end: 10px;
+}
+
+.pokemon-card h2 {
+  margin-block: 10px 5px;
+  margin-inline: 0;
+  font-size: 18px;
+  color: var(--color-text-primary);
+}
+
+.pokemon-card p {
+  margin-block: 5px 15px;
+  margin-inline: 0;
+  font-size: 14px;
+  color: var(--color-text-secondary);
+}
+
+.switch {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  font-size: 14px;
+  cursor: pointer;
+  user-select: none;
+  color: var(--color-text-secondary);
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: relative;
+  display: inline-block;
+  width: 36px;
+  height: 20px;
+  background-color: var(--color-switch-bg);
+  margin-inline-end: 10px;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  inset-inline-start: 2px;
+  inset-block-start: 2px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: var(--color-switch-active);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 2px var(--color-switch-active);
+}
+
+input:checked + .slider:before {
+  transform: translateX(16px);
+}
+
