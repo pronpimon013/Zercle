@@ -12,7 +12,3 @@ body {
     margin: 0;
     padding: 0;
 }
-
-.clip-outside-rounded {
-    clip-path: path('M0,30 Q50,0 100,30 T200,30 L200,200 L0,200 Z');
-}
