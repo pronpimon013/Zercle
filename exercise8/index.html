@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Exercise 8</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body class="bg-gray-600 h-screen flex items-center justify-center">
+<div class="bg-gray-50 bg-opacity-90 p-6 rounded-3xl shadow-xl w-80 shadow-gray-500 dark:shadow-lg dark:shadow-gray-800/80">
+  <!-- Calculator Display -->
+  <div class="h-48 mb-4 rounded-lg overflow-hidden px-4 py-3 flex flex-col justify-end items-end">
+    <div id="history" class="text-xl text-gray-500 mb-1"> </div>
+    <div id="display" class="text-4xl font-semibold text-gray-700">0</div>
+  </div>
+
+  <!-- Calculator Buttons -->
+  <div class="grid grid-cols-4 gap-3">
+    <!-- Row 1 -->
+    <button class="bg-orange-500 hover:bg-orange-600 text-white py-3 rounded-2xl text-xl transition-colors col-span-2 shadow-lg shadow-orange-500 dark:shadow-lg dark:shadow-red-800/80 font-medium" data-action="clear">C</button>
+    <button class="bg-gray-400 hover:bg-gray-500 text-gray-800 py-3 rounded-2xl text-xl font-bold transition-colors shadow-lg shadow-gray-500 dark:shadow-lg dark:shadow-gray-800/80" data-action="operation" data-value="/">&divide;</button>
+    <button class="bg-gray-400 hover:bg-gray-500 text-gray-800 py-3 rounded-2xl text-xl font-bold transition-colors shadow-lg shadow-gray-500 dark:shadow-lg dark:shadow-gray-800/80" data-action="operation" data-value="*">&times;</button>
+
+    <!-- Row 2 -->
+    <button class="bg-gray-300 hover:bg-gray-500 text-gray-800 py-3 rounded-2xl  text-xl transition-colors shadow-lg shadow-gray-500 dark:shadow-lg dark:shadow-gray-800/80" data-action="number" data-value="7">7</button>
+    <button class="bg-gray-300 hover:bg-gray-500 text-gray-800 py-3 rounded-2xl text-xl transition-colors shadow-lg shadow-gray-500 dark:shadow-lg dark:shadow-gray-800/80" data-action="number" data-value="8">8</button>
+    <button class="bg-gray-300 hover:bg-gray-500 text-gray-800 py-3 rounded-2xl text-xl transition-colors shadow-lg shadow-gray-500 dark:shadow-lg dark:shadow-gray-800/80" data-action="number" data-value="9">9</button>
+    <button class="bg-gray-400 hover:bg-gray-500 text-black py-3 rounded-2xl text-xl font-bold transition-colors shadow-lg shadow-gray-500 dark:shadow-lg dark:shadow-gray-800/80" data-action="operation" data-value="-">&minus;</button>
+
+    <!-- Row 3 -->
+    <button class="bg-gray-300 hover:bg-gray-500 text-gray-800 py-3 rounded-2xl text-xl transition-colors shadow-lg shadow-gray-500 dark:shadow-lg dark:shadow-gray-800/80" data-action="number" data-value="4">4</button>
+    <button class="bg-gray-300 hover:bg-gray-500 text-gray-800 py-3 rounded-2xl text-xl transition-colors shadow-lg shadow-gray-500 dark:shadow-lg dark:shadow-gray-800/80" data-action="number" data-value="5">5</button>
+    <button class="bg-gray-300 hover:bg-gray-500 text-gray-800 py-3 rounded-2xl text-xl transition-colors shadow-lg shadow-gray-500 dark:shadow-lg dark:shadow-gray-800/80" data-action="number" data-value="6">6</button>
+    <button class="bg-gray-400 hover:bg-gray-500 text-black py-3 rounded-2xl text-xl font-bold transition-colors shadow-lg shadow-gray-500 dark:shadow-lg dark:shadow-gray-800/80" data-action="operation" data-value="+">&plus;</button>
+
+    <!-- Row 4 -->
+    <button class="bg-gray-300 hover:bg-gray-500 text-gray-800 py-3 rounded-2xl text-xl transition-colors shadow-lg shadow-gray-500 dark:shadow-lg dark:shadow-gray-800/80" data-action="number" data-value="1">1</button>
+    <button class="bg-gray-300 hover:bg-gray-500 text-gray-800 py-3 rounded-2xl text-xl transition-colors shadow-lg shadow-gray-500 dark:shadow-lg dark:shadow-gray-800/80" data-action="number" data-value="2">2</button>
+    <button class="bg-gray-300 hover:bg-gray-500 text-gray-800 py-3 rounded-2xl text-xl transition-colors shadow-lg shadow-gray-500 dark:shadow-lg dark:shadow-gray-800/80" data-action="number" data-value="3">3</button>
+    <button class="bg-orange-500 hover:bg-orange-600 text-white py-3 rounded-2xl text-xl font-bold transition-colors row-span-2 shadow-lg shadow-orange-500 dark:shadow-lg dark:shadow-red-800/80" data-action="calculate">&equals;</button>
+
+    <!-- Row 5 -->
+    <button class="bg-gray-300 hover:bg-gray-500 text-gray-800 py-3 rounded-2xl text-xl transition-colors col-span-2 shadow-lg shadow-gray-500 dark:shadow-lg dark:shadow-gray-800/80" data-action="number" data-value="0">0</button>
+    <button class="bg-gray-300 hover:bg-gray-500 text-gray-800 py-3 rounded-2xl text-xl font-bold transition-colors shadow-lg shadow-gray-500 dark:shadow-lg dark:shadow-gray-800/80" data-action="decimal">.</button>
+  </div>
+</div>
+
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>
