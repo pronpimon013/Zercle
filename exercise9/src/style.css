@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+#random-quote {
+    font-style: italic;
+}
+
+/* Smooth transitions */
+button {
+    transition: all 0.2s ease;
+}
+
+/* Quote card hover effect */
+#quotes-container > div {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#quotes-container > div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+}
+
+/* Refresh button animation */
+#refresh-quote:active {
+    transform: rotate(180deg);
+    transition: transform 0.5s ease;
+}
